@@ -1,176 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Rentals website</title>
-    <!-- link to css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- box icons -->
-    <link rel="stylesheet" href=" <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
+  <title>Payment Gateway Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
     
+    header {
+      background-color: #d3d9e1;
+      color: #105664;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    form {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 80%;
+      padding: 5px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <!-- logo to be pasted in src -->
-        <a href="#" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_FglA6NANTDLf4e-1R2SyyTED393Rdzh2rDp70HvFXs374CLvm7NA-1fHnvSRIcZN1mY&usqp=CAU" alt=""></a> 
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#ride">Ride</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            
-
-        </ul>
-        <div class="header-btn"></div>
-        <a href="signup.html" class="Sign-Up">Sign-Up</a>
-        <a href="signin.html" class="Sign-in">Sign-In</a>
-    </header>
-    <!--Home-->
-    <section class ="home" id="home">
-        <div class="text">
-            <h1><span>looking</span> to <br>Rent for bike</h1>
-            <p>Xpresso Easy Rental  <br>Easy Ride </p>
-            <div class="app-stores">
-                <img src="" alt="">
-                <img src="img/512x512.png" alt="">   <!--not getting the image--><!--time:14:16-->
-            </div>
+  <header>
+    <h1>Payment Gateway Example</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Payment Details</h2>
+      <form id="payment-form">
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="upi">UPI</option>
+          <option value="visa">Visa Card</option>
+          <option value="bank">Bank Payment</option>
+        </select>
+        
+        <div id="upi-details" style="display: none;">
+          <label for="upi-id">UPI ID:</label>
+          <input type="text" id="upi-id" name="upi-id">
         </div>
-        <div class="form-container">
-            <form action="">
-                <div class="input-box">
-                    <span>Location</span>
-                    <input type="search" name="" id="" placeholder="Search places">
-                </div>
-                <div class="input-box">
-                    <span>pick-up Date</span>
-                    <input type="date" name="" id="">
-                </div>
-                <div class="input-box">
-                    <span>return Date</span>
-                    <input type="date" name="" id="">
-                </div>
-                <input type="submit" name="" id="" class="btn">
-            </form>
+        
+        <div id="visa-details" style="display: none;">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" name="card-number">
+          
+          <label for="expiry">Expiry Date:</label>
+          <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+          
+          <label for="cvv">CVV:</label>
+          <input type="number" id="cvv" name="cvv">
         </div>
+        
+        <div id="bank-details" style="display: none;">
+          <label for="bank-name">Bank Name:</label>
+          <input type="text" id="bank-name" name="bank-name">
+          
+          <label for="account-number">Account Number:</label>
+          <input type="text" id="account-number" name="account-number">
+        </div>
+        
+        <button type="submit">Pay Now</button>
+      </form>
     </section>
-    <!--Ride-->
-    <section class="ride" id="ride">
-        <div class="heading">
-            <span>How its work</span>
-            <h1>Rent with 3 easy Steps</h1>
-        </div>
-        <div class="ride-container">
-            <div class="box">
-               
-
-                <h2>choose A Location</h2>
-                
-                <p>Xpresso lets you to choose your desired location where you want to go with or without any one. </p>
-            </div>
-            <div class="box">
-               <br>
-                <h2>Pick-up date</h2>
-                <p>Xpresso lets you to select the date of rental and time which is fully flexible according to the flexibity of the consumer</p>
-            </div>
-
-            <div class="box">
-                
-                <h2>Book a Bike</h2>
-                <p>Xpresso lets you to book a desired bike or scooty for the consumers so that you will be happy after every rental</p>
-            </div>
-        </div>
-    </<section>
-        <!-- services -->
-        <section class="services" id="services">
-        <div class="heading">
-            <span>Best Services</span>
-            <h1>Explore out top Deals <br> From Top Rated Delears</h1>
-        </div>
-        <div class="Services-containers">
-            <div class="box-img">
-                
-                <img src="https://images.unsplash.com/photo-1569564263087-78250d9c7537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvbmRhJTIwbW90b3JjeWNsZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="">
-            </div>
-            <p>Honda CB750</p>
-            <h3>Excellent service</h3>
-            <h2>Rs120-Rs150 <span>/hr</span></h2>
-            <a href="pick.html" class="btn">Rent Now</a>
-            <br>
-        </div>
     
-        <div class="box-img">
-            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGhvbmRhJTIwbW90b3JjeWNsZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="">
-        </div>
-        <p>Ducati</p>
-        <h3>Excellent service</h3>
-        <h2>Rs100-Rs120 <span>/hr</span></h2>
-        <a href="pick.html" class="btn">Rent Now</a>
-        <br>
-    </div>
+    <section id="payment-response" style="display: none;">
+      <h2>Payment Response</h2>
+      <p id="payment-status"></p>
+      <p id="payment-message"></p>
+    </section>
+  </main>
+  
+  <script>
+    // JavaScript code to handle payment form submission
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent form submission
 
-    <div class="box-img">
-        <img src="https://images.unsplash.com/photo-1505052533681-2be9d65eade5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGhvbmRhJTIwbW90b3JjeWNsZXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="">
-    </div>
-    <p>Harley Dividson</p>
-    <h3>Excellent service</h3>
-    <h2>Rs100-Rs110 <span>/hr</span></h2>
-    <a href="pick.html" class="btn">Rent Now</a>
-    <br>
-</div>
+      var paymentMethod = document.getElementById('payment-method').value;
+      var paymentStatus;
+      var paymentMessage;
+      
+      if (paymentMethod === 'upi') {
+        var upiId = document.getElementById('upi-id').value;
+        // Simulate UPI payment processing
+        paymentStatus = upiId ? 'success' : 'failure';
+        paymentMessage = paymentStatus === 'success' ? 'UPI payment successful.' : 'UPI payment failed.';
+      } else if (paymentMethod === 'visa') {
+        var cardNumber = document.getElementById('card-number').value;
+        // Simulate Visa card payment processing
+        paymentStatus = cardNumber ? 'success' : 'failure';
+        paymentMessage = paymentStatus === 'success' ? 'Visa card payment successful.' : 'Visa card payment failed.';
+      } else if (paymentMethod === 'bank') {
+        var bankName = document.getElementById('bank-name').value;
+        var accountNumber = document.getElementById('account-number').value;
+        // Simulate bank payment processing
+        paymentStatus = bankName && accountNumber ? 'success' : 'failure';
+        paymentMessage = paymentStatus === 'success' ? 'Bank payment successful.' : 'Bank payment failed.';
+      }
+      
+      // Hide the payment form
+      document.getElementById('payment-form').style.display = 'none';
 
-<div class="box-img">
-    <img src="https://images.unsplash.com/photo-1519750078696-b5051c379982?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNjb290ZXJ8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=600&q=60" alt="">
-</div>
-<p>Vespa </p>
-<h3>Excellent service</h3>
-<h2>Rs80-Rs100 <span>/hr</span></h2>
-<a href="pick.html" class="btn">Rent Now</a>
-<br>
-</div>
-
-<div class="box-img">
-    <img src="https://images.unsplash.com/photo-1575480478745-379a8259b634?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI1fHxzY29vdGVyfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"alt="">
-</div>
-<p>Xmax</p>
-<h3>Excellent service</h3>
-<h2>Rs90-Rs100 <span>/hr</span></h2>
-<a href="pick.html" class="btn">Rent Now</a>
-<br>
-</div>
-</section>
-<!-- About -->
-<section class="about" id="about">
-    <div class="heading">
-        <span>About Us</span>
-        <h1>Best Customer Experience</h1>
-    </div>
-
-    <div class="about-container">
-        <div class="about-img">
-            
-            <img src="https://images.unsplash.com/photo-1587046803357-86dccf281aa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGhvbmRhJTIwbW90b3JjeWNsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="">
-            
-        </div>
-        <div class="about-text">
-            <span>About Us</span>
-            <p>This is the cheapest Bike Rental service ever.Mostly benificial for the students who are tired of paying so much to the private public transport.Here for deliving the best service for you.</p>
-            <a href="#" class="btn">Learn More</a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-    <!-- link to js -->
-    <script type="text/javascript" src="jm.js"></script>
-   
+      // Display the payment response
+      document.getElementById('payment-response').style.display = 'block';
+      document.getElementById('payment-status').textContent = 'Status: ' + paymentStatus.toUpperCase();
+      document.getElementById('payment-message').textContent = 'Message: ' + paymentMessage;
+    });
+    
+    // JavaScript code to handle payment method selection
+    document.getElementById('payment-method').addEventListener('change', function() {
+      var selectedMethod = this.value;
+      
+      // Hide all payment details
+      document.getElementById('upi-details').style.display = 'none';
+      document.getElementById('visa-details').style.display = 'none';
+      document.getElementById('bank-details').style.display = 'none';
+      
+      // Show the selected payment details
+      if (selectedMethod === 'upi') {
+        document.getElementById('upi-details').style.display = 'block';
+      } else if (selectedMethod === 'visa') {
+        document.getElementById('visa-details').style.display = 'block';
+      } else if (selectedMethod === 'bank') {
+        document.getElementById('bank-details').style.display = 'block';
+      }
+    });
+  </script>
+  
+  <footer>
+    &copy; 2023 Payment Gateway Example. All rights reserved.
+  </footer>
 </body>
 </html>
